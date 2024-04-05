@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	// "math"
-)
+import "fmt"
 
 func main() {
 	const (

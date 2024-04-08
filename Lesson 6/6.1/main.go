@@ -7,11 +7,6 @@ type contract struct {
 	Number, Date string
 }
 
-// func (c contract) String() string {
-// 	return fmt.Sprintf("{ID:%d Number:%s Date:%s}",
-// 		c.id, c.Number, c.Date)
-// }
-
 func main() {
 	c := newContract(1, `#000A\n101`, "2024-01-31")
 	fmt.Printf("%#v", c)

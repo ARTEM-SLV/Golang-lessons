@@ -34,19 +34,19 @@ func main() {
 
 	// Для примера сравним указателей на одинаковые переменные
 	str2 := str
-	fmt.Printf("&str == &str2 %v\n", &str == &str2)
+	fmt.Printf("&str = &str2 %v\n", &str == &str2)
 	fmt.Printf("str:   value = %s, address = %p\n", str, &str)
 	fmt.Printf("str:   value = %s, address = %p\n", str2, &str2)
 	// В этом примере в переменную str2 присваиваем значение переменной str.
 	// Go создает разные адреса для каждой переменной
 
 	/*
-		Если нужно получить ссылку на тот же адрес пременной,
+		Если нужно получить ссылку на тот же адрес в памяти,
 		то нужно передать ссылку на переменную,	а не значение,
 		тогда переменная будет объявлена как указатель
 	*/
 	str3 := &str
-	fmt.Printf("&str == &str2 %v\n", &str == str3)
+	fmt.Printf("&str = &str2 %v\n", &str == str3)
 	fmt.Printf("str:   value = %s, address = %p\n", str, &str)
 	fmt.Printf("str:   value = %s, address = %p\n", *str3, str3)
 }

@@ -6,5 +6,5 @@ func main() {
 	a := 10
 
 	fmt.Printf("Значение переменной p: %d\n", a)
-	fmt.Printf("Адрес переменной p: %d", &a)
+	fmt.Printf("Адрес переменной p: %p\n", &a)
 }

@@ -8,6 +8,10 @@ func main() {
 
 	index := 3
 	// Срезирование среза для удаления элемента
-	slice = append(slice[:index], slice[index+1:]...)
+	slice = deleteElement(slice, index)
 	fmt.Println(slice)
+}
+
+func deleteElement(slice []int, index int) []int {
+	return append(slice[:index], slice[index+1:]...)
 }

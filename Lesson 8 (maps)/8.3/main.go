@@ -10,8 +10,6 @@ func main() {
 		"лев":     {},
 	}
 
-	fmt.Println("Содержимое карты:")
-	for key := range animals {
-		fmt.Println(key)
-	}
+	delete(animals, "бегемот")
+	fmt.Println(animals)
 }

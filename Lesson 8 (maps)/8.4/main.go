@@ -10,8 +10,7 @@ func main() {
 		"лев":     {},
 	}
 
-	fmt.Println("Содержимое карты:")
-	for key := range animals {
-		fmt.Println(key)
-	}
+	animals["выдра"] = struct{}{}
+
+	fmt.Println(animals)
 }

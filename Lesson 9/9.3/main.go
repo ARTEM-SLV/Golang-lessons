@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-
+	food := "огурец"
+	checkFood(food)
 }
 
 func checkFood(food string) {

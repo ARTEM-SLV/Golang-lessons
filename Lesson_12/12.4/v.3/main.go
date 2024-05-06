@@ -17,9 +17,11 @@ func (d *Duck) Sing() string {
 }
 
 func main() {
-	var d *Duck
+	// вместо создания указателя создаю структуру Duck
+	var d Duck //var d *Duck
+	d.voice = "кря-кря-кря"
 
-	song, err := Sing(d)
+	song, err := Sing(&d)
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -28,10 +30,8 @@ func main() {
 }
 
 func Sing(b Bird) (string, error) {
-	// явно полусчить тип Duck и првоерять его на nil
-	d := b.(*Duck)
-	if d != nil {
-		return d.Sing(), nil
+	if b != nil {
+		return b.Sing(), nil
 	}
 	return "", errors.New("Ошибка пения!")
 }

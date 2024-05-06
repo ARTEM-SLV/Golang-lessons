@@ -17,12 +17,14 @@ type Csv struct{}
 func (c Csv) Format() {
 	fmt.Println("Данные в формате csv")
 }
+
 func main() {
 	x := Xml{}
 	Report(x)
 	c := Csv{}
 	Report(c)
 }
+
 func Report(f format) {
 	f.Format()
 }

@@ -3,7 +3,6 @@ package main
 import (
 	"errors"
 	"fmt"
-	"reflect"
 )
 
 type myFirstError struct {
@@ -23,9 +22,9 @@ func main() {
 	fmt.Println(err3)
 
 	if errors.As(err3, &firstErr) {
-		fmt.Println("Цепочка ошибок содержит ошибку типа", reflect.TypeOf(firstErr))
+		fmt.Printf("Цепочка ошибок содержит ошибку типа %T\n", firstErr)
 		fmt.Println(firstErr)
 	} else {
-		fmt.Println("Цепочка ошибок не содержит ошибку типа", reflect.TypeOf(firstErr))
+		fmt.Printf("Цепочка ошибок не содержит ошибку типа %T\n", firstErr)
 	}
 }

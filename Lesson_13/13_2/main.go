@@ -24,5 +24,5 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-	fmt.Println(string(jsonStr))
+	fmt.Printf("%v\n", string(jsonStr))
 }

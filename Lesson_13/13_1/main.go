@@ -6,18 +6,18 @@ import (
 )
 
 type contract struct {
-	Number   int
-	Landlord string
-	Tenat    string
+	Number   int    `json:"number"`
+	Landlord string `json:"landlord"`
+	Tenant   string `json:"tenant"`
 }
 
 func main() {
-	jsonStr := `{"number":1,"landlord":"ОстапБендер","tenat":"Шура Балаганов»}`
+	var c contract
+	jsonStr := `{"number":1,"landlord":"ОстапБендер","tenant":"Шура Балаганов"}`
 
-	c := contract{}
 	err := json.Unmarshal([]byte(jsonStr), &c)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("error:", err)
 		return
 	}
 	fmt.Printf("%+v\n", c)

@@ -12,12 +12,13 @@ type contract struct {
 }
 
 func main() {
-	strJSON := `{"number":1,"landlord":"ОстапБендер","tenat":"Шура Балаганов»}`
+	jsonStr := `{"number":1,"landlord":"ОстапБендер","tenat":"Шура Балаганов»}`
 
 	c := contract{}
-	err := json.Unmarshal([]byte(strJSON), &c)
+	err := json.Unmarshal([]byte(jsonStr), &c)
 	if err != nil {
 		fmt.Println(err)
+		return
 	}
 	fmt.Printf("%+v\n", c)
 }

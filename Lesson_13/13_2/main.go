@@ -21,7 +21,7 @@ func main() {
 
 	jsonStr, err := json.Marshal(c)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("error:", err)
 		return
 	}
 	fmt.Printf("%v\n", string(jsonStr))

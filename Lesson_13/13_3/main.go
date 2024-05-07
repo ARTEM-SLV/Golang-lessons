@@ -36,7 +36,7 @@ func main() {
 
 	var contracts Contracts
 	if err := xml.Unmarshal([]byte(xmlData), &contracts); err != nil {
-		fmt.Println("Ошибка при разборе XML:", err)
+		fmt.Println("error:", err)
 		return
 	}
 

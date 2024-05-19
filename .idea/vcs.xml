@@ -2,6 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Lesson_13/13_5/format" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Golang-lessons" vcs="Git" />
   </component>
 </project>

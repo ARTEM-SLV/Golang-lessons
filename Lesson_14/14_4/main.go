@@ -11,13 +11,8 @@ func main() {
 		<-ch
 		stop <- struct{}{}
 	}()
-	for {
-		select {
-		case <-stop:
-			fmt.Println("happy end")
-			return
-		case ch <- 1:
-		}
-	}
+	ch <- 1
+	<-stop
+	fmt.Println("happy end")
 
 }

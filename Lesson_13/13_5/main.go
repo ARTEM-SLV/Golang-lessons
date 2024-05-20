@@ -7,12 +7,12 @@ import (
 )
 
 func main() {
-	err := format.Do(`E:\Go\Go-Lessons\Lesson_13\13_5\animals.json`, `E:\Go\Go-Lessons\Lesson_13\13_5\`)
+	err := format.Do(`.\animals.json`, `.`)
 	if err != nil {
 		log.Println(err)
 	}
 
-	err = format2.Do(`E:\Go\Go-Lessons\Lesson_13\13_5\animals.xml`, `E:\Go\Go-Lessons\Lesson_13\13_5\`)
+	err = format2.Do(`.\animals.xml`, `.\`)
 	if err != nil {
 		log.Println(err)
 	}
